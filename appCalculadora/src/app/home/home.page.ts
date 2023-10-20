@@ -12,7 +12,7 @@ export class HomePage {
   operacao!: number;
   botaoAC: boolean = false; //para trocar AC por C quando o valor1 for inserido
 
-  constructor() {}
+
 
   addNum(valor: string) {
     if ((this.visor.length == 1) && (this.visor == '0')) {
