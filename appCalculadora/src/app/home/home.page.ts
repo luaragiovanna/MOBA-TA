@@ -10,10 +10,7 @@ export class HomePage {
   valor1!: number;
   valor2!: number;
   operacao!: number;
-  botaoAC: boolean = false; //para trocar AC por C quando o valor1 for inserido
-
-
-
+  botaoAC: boolean = false; 
   addNum(valor: string) {
     if ((this.visor.length == 1) && (this.visor == '0')) {
       this.visor = valor;
@@ -78,5 +75,6 @@ export class HomePage {
     this.zerar();
     this.botaoAC = false;
   }
+  
   
 }

@@ -1,7 +1,7 @@
 ion-list{
   height: 100%;
   border: none;
-  --background: #000000;
+ 
 }
 ion-item{
   margin: auto;
@@ -10,14 +10,23 @@ ion-item{
 
 ion-button {
   width: 20%;
-  height: 100%;
+  height: 70%;
   margin: 0 auto;
   margin-top: 3%;
   margin-bottom: 3%;
   font-size: 1.5em;
   --background: #2e2e2e;
-  --backgorund-activated: #2e2e2e;
+  --backgorund-activated: #5e5b5b;
   --border-radius: 50em;
+}
+ion-fab-button{
+  margin: 0 auto;
+  width: 20%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  font-size: 17pt;
+  --background: #272525;
+  --background-activated: #5e5b5b;
 }
 ion-content {
   height: 150%;
@@ -26,35 +35,34 @@ ion-content {
   border-radius: 60pt; 
 }
 
-
+ion-button:active{
+  --background-activated: #5e5b5b;
+}
 .operacao{
   --background: #ffa41c;
-  --background-activated: #ffa41c;
+  --background-activated: #ffbf5e;
 }
 
 .operacao2{
---background: #868380;
+--background: #aca8a5;
  --color:#050505;
- --background-activated:#868380;
+ --background-activated:#e0e0e0;
 }
 
-ion-input :disabled {
-  color: #ffffff;
-}
 
 ion-input {
-  font-size: 55pt;
   text-align: right;
-  margin-bottom: 1%;
-  margin-right: 5%;
-  font-weight: lighter;
+  font-size: 50pt;
+  margin-right: 7%;
+  
   
 }
 
 
 
+
 #zero {
-  width: 50%;
-  --background: #2e2e2e;
-  --backgorund-activated: #2e2e2e;
+  width: 70%;
+  --background: #272525;
+  --backgorund-activated: #5e5b5b;
 }

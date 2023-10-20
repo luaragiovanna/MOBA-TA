@@ -7,74 +7,76 @@
     <ion-item> </ion-item>
    
     <ion-item >
-      <ion-input  [ngModel]="visor" disabled="true"></ion-input>
+      <ion-input [ngModel]="visor" readonly id="visor" ></ion-input>
+
+
      </ion-item>
 
     <ion-item>
        <!--COMECO LB1-->
        
-        <ion-button  class="operacao2" (click)="botaoAC ? zerar() : mudaBotao()">
+        <ion-fab-button  class="operacao2" (click)="botaoAC ? zerar() : mudaBotao()">
           {{ botaoAC ? 'C' : 'AC' }}
-        </ion-button >
+        </ion-fab-button >
      
-      <ion-button  class="operacao2" (click)="addSinal()">
+      <ion-fab-button  class="operacao2" (click)="addSinal()">
         +/-
-       </ion-button >
-       <ion-button class="operacao2" (click)="addPorcentagem()">
+       </ion-fab-button >
+       <ion-fab-button class="operacao2" (click)="addPorcentagem()">
         %
-       </ion-button >
-       <ion-button  class="operacao" (click)="addOperacao(3)">
+       </ion-fab-button >
+       <ion-fab-button  class="operacao" (click)="addOperacao(3)">
         ÷
-       </ion-button >
+       </ion-fab-button >
 
        <!--fim LB1-->
     </ion-item>
 
     <ion-item > <!--comeco LB2-->
-      <ion-button  (click)="addNum('7')">
+      <ion-fab-button  (click)="addNum('7')">
         7
-       </ion-button >
-       <ion-button  (click)="addNum('8')">
+       </ion-fab-button >
+       <ion-fab-button  (click)="addNum('8')">
          8
-        </ion-button >
-        <ion-button (click)="addNum('9')">
+        </ion-fab-button >
+        <ion-fab-button (click)="addNum('9')">
          9
-        </ion-button >
-        <ion-button  class="operacao" (click)="addOperacao(2)">
+        </ion-fab-button >
+        <ion-fab-button class="operacao" (click)="addOperacao(2)">
           &times;
-         </ion-button >
+         </ion-fab-button >
     
     
     </ion-item>
 
     <ion-item >
-      <ion-button  (click)="addNum('4')">
+      <ion-fab-button  (click)="addNum('4')">
         4
-       </ion-button >
-       <ion-button  (click)="addNum('5')">
+       </ion-fab-button >
+       <ion-fab-button  (click)="addNum('5')">
          5
-        </ion-button >
-        <ion-button  (click)="addNum('6')">
+        </ion-fab-button >
+        <ion-fab-button  (click)="addNum('6')">
          6
-        </ion-button >
-        <ion-button  class="operacao" (click)="addOperacao(1)">
+        </ion-fab-button >
+        <ion-fab-button  class="operacao" (click)="addOperacao(1)">
           -
-         </ion-button >
+         </ion-fab-button >
     </ion-item>
 
     <ion-item >
-      <ion-button  (click)="addNum('1')">
+      <ion-fab-button  (click)="addNum('1')">
         1   
-       </ion-button >
-       <ion-button (click)="addNum('2')">
+       </ion-fab-button>
+       <ion-fab-button (click)="addNum('2')">
          2
-        </ion-button >
-        <ion-button  (click)="addNum('3')">
+        </ion-fab-button >
+        <ion-fab-button  (click)="addNum('3')">
          3
-        </ion-button >
-        <ion-button  class="operacao" (click)="addOperacao(0)">
+        </ion-fab-button >
+        <ion-fab-button  class="operacao" (click)="addOperacao(0)">
           +
-         </ion-button >
+         </ion-fab-button >
     </ion-item>
 
     <ion-item>
@@ -82,13 +84,13 @@
         0
       </ion-button>
 
-     <ion-button  (click)="addVirgula()">
+     <ion-fab-button (click)="addVirgula()">
       ,
-    </ion-button >
+    </ion-fab-button >
 
-     <ion-button class="operacao" (click)="calcular()">
+     <ion-fab-button class="operacao" (click)="calcular()">
       =
-    </ion-button >
+    </ion-fab-button >
     </ion-item>
 
   </ion-list>
