@@ -1,9 +1,11 @@
 ion-list{
   height: 100%;
+  border: none;
+  --background: #000000;
 }
 ion-item{
   margin: auto;
-
+  border: none;  
 }
 
 ion-fab-button{
@@ -15,6 +17,13 @@ font-size: 17pt;
 width: 20%;
 
 }
+ion-content {
+  height: 100%;
+  border: none;
+  --background: #000000;
+  border-radius: 15px; 
+}
+
 
 .operacao{
   --background: #ffa41c;
@@ -27,6 +36,7 @@ width: 20%;
  --background-activated:#868380;
 }
 ion-input{
+  
   font-size: 40pt;
   text-align: right;
   margin-right: 6%;
@@ -35,4 +45,6 @@ ion-input{
 #zero{
   width: 45%;
   height: 90%;
+  
+  
 }

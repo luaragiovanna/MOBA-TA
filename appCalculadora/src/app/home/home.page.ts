@@ -6,72 +6,77 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  visor: string ='0';
-  valor1! : number;
-  valor2! : number;
+  visor: string = '0';
+  valor1!: number;
+  valor2!: number;
   operacao!: number;
+  botaoAC: boolean = false; //para trocar AC por C quando o valor1 for inserido
 
-  
   constructor() {}
 
-  addNum(valor: string){
-    if((this.visor.length == 1) && (this.visor == '0')){
+  addNum(valor: string) {
+    if ((this.visor.length == 1) && (this.visor == '0')) {
       this.visor = valor;
-    }else{
+    } else {
       this.visor += valor;
     }
-    
+    this.botaoAC = true;
   }
 
-  addOperacao(valor: number){
-    this.operacao=valor;
-    this.valor1= +this.visor;
-    //this.valor1= Number(this.visor); tranf tring no numero
+  addOperacao(valor: number) {
+    this.operacao = valor;
+    this.valor1 = +this.visor;
     this.zerar();
   }
 
-  calcular(){
-    this.valor2= +this.visor;
-    switch(this.operacao){
+  calcular() {
+    this.valor2 = +this.visor;
+    switch (this.operacao) {
       case 0: {
-        this.visor= ""+ (this.valor1 + this.valor2);
+        this.visor = "" + (this.valor1 + this.valor2);
         break;
       }
-      case 1:{
-        this.visor= ""+ (this.valor1 - this.valor2);
+      case 1: {
+        this.visor = "" + (this.valor1 - this.valor2);
         break;
       }
-
-      case 2:{
-        this.visor= ""+ (this.valor1 * this.valor2);
+      case 2: {
+        this.visor = "" + (this.valor1 * this.valor2);
         break;
       }
-
-      case 3:{
-        if(this.valor2 == 0){
-          this.visor='Error'
-          
-        }else{
-        this.visor= ""+ (this.valor1 / this.valor2);
+      case 3: {
+        if (this.valor2 == 0) {
+          this.visor = 'Error'
+        } else {
+          this.visor = "" + (this.valor1 / this.valor2);
         }
         break;
       }
-      
     }
+    this.botaoAC = false;
   }
 
-  addSinal(){
+  addSinal() {
     this.visor = "" + (+this.visor * (-1));
   }
 
-  zerar(){
-    this.visor= '0';
+  zerar() {
+    this.visor = '0';
+    this.botaoAC = false;
   }
 
-  addPorcentagem(){
-    this.visor = "" + (+this.visor / (100));
+  addPorcentagem() {
+    this.visor = "" + (+this.visor / 100);
   }
-  addVirgula(){
-    this.visor +='.'; 
+  
+  addVirgula() {
+    if (!this.visor.includes('.')) {
+      this.visor += '.';
+    }
   }
+  mudaBotao() {
+    this.zerar();
+    this.botaoAC = false;
+  }
+  
 }

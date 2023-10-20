@@ -1,21 +1,22 @@
 
 
-<ion-content >
+<ion-content  >
 
   <ion-list >
-    <ion-item >p1 </ion-item>
-
-    <ion-item >p2</ion-item>
-
-    <ion-item >
-     <ion-input [(ngModel)] = "visor"></ion-input> 
+    <ion-item> </ion-item>
+    <ion-item> </ion-item>
+   
+    <ion-item class="ion-align-items-center">
+     <ion-input [(ngModel)] = "visor" style="width: 100%;"></ion-input> 
      </ion-item>
 
     <ion-item>
        <!--COMECO LB1-->
-      <ion-fab-button class="operacao2" (click)="zerar()" >
-       AC
-      </ion-fab-button>
+       
+        <ion-fab-button class="operacao2" (click)="botaoAC ? zerar() : mudaBotao()">
+          {{ botaoAC ? 'C' : 'AC' }}
+        </ion-fab-button>
+     
       <ion-fab-button class="operacao2" (click)="addSinal()">
         +/-
        </ion-fab-button>
@@ -40,7 +41,7 @@
          9
         </ion-fab-button>
         <ion-fab-button class="operacao" (click)="addOperacao(2)">
-          X
+          &times;
          </ion-fab-button>
     
     
