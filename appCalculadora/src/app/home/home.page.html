@@ -13,16 +13,16 @@
 
     <ion-item>
        <!--COMECO LB1-->
-      <ion-fab-button class="operacao2" >
+      <ion-fab-button class="operacao2" (click)="zerar()" >
        AC
       </ion-fab-button>
-      <ion-fab-button class="operacao2" >
+      <ion-fab-button class="operacao2" (click)="addSinal()">
         +/-
        </ion-fab-button>
-       <ion-fab-button class="operacao2" >
+       <ion-fab-button class="operacao2" (click)="addPorcentagem()">
         %
        </ion-fab-button>
-       <ion-fab-button class="operacao">
+       <ion-fab-button class="operacao" (click)="addOperacao(3)">
         ÷
        </ion-fab-button>
 
@@ -30,16 +30,16 @@
     </ion-item>
 
     <ion-item > <!--comeco LB2-->
-      <ion-fab-button>
+      <ion-fab-button (click)="addNum('7')">
         7
        </ion-fab-button>
-       <ion-fab-button>
+       <ion-fab-button (click)="addNum('8')">
          8
         </ion-fab-button>
-        <ion-fab-button>
+        <ion-fab-button (click)="addNum('9')">
          9
         </ion-fab-button>
-        <ion-fab-button class="operacao">
+        <ion-fab-button class="operacao" (click)="addOperacao(2)">
           X
          </ion-fab-button>
     
@@ -47,31 +47,31 @@
     </ion-item>
 
     <ion-item >
-      <ion-fab-button>
+      <ion-fab-button (click)="addNum('4')">
         4
        </ion-fab-button>
-       <ion-fab-button>
+       <ion-fab-button (click)="addNum('5')">
          5
         </ion-fab-button>
-        <ion-fab-button>
+        <ion-fab-button (click)="addNum('6')">
          6
         </ion-fab-button>
-        <ion-fab-button class="operacao">
+        <ion-fab-button class="operacao" (click)="addOperacao(1)">
           -
          </ion-fab-button>
     </ion-item>
 
     <ion-item >
-      <ion-fab-button>
-        1
+      <ion-fab-button (click)="addNum('1')">
+        1   
        </ion-fab-button>
-       <ion-fab-button>
+       <ion-fab-button (click)="addNum('2')">
          2
         </ion-fab-button>
-        <ion-fab-button>
+        <ion-fab-button (click)="addNum('3')">
          3
         </ion-fab-button>
-        <ion-fab-button class="operacao">
+        <ion-fab-button class="operacao" (click)="addOperacao(0)">
           +
          </ion-fab-button>
     </ion-item>
@@ -81,11 +81,11 @@
       0
      </ion-fab-button>
 
-     <ion-fab-button>
+     <ion-fab-button (click)="addVirgula()">
       ,
     </ion-fab-button>
 
-     <ion-fab-button class="operacao">
+     <ion-fab-button class="operacao" (click)="calcular()">
       =
     </ion-fab-button>
     </ion-item>
