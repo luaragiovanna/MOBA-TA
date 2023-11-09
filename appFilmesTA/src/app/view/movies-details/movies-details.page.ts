@@ -18,4 +18,9 @@ export class MoviesDetailsPage implements OnInit {
     this.omdbapi.getById(id).subscribe(result => this.info = result);
   }
 
+  openURL(){
+    //abrir em uma nova pagina
+    window.open(this.info.Website, '_blank');
+  }
+
 }
